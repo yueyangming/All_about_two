@@ -55,11 +55,11 @@ if __name__ == '__main__':
                         if result >= 0 and result <= RESULT_LIMIT and (whole_string not in RESULT_LIST[result][1]):
                             RESULT_LIST[result][0] += 1
                             RESULT_LIST[result][1].append(whole_string)
-                        whole_string = whole_string.replace('**', '^')  # Then change back to form the string.
+                        whole_string = whole_string.replace('**', '&')  # Then change back to form the string.
                         whole_string = string_pop(whole_string, right_bracket_position * 2)
                         whole_string = string_pop(whole_string, left_bracket_position * 2)
                     except:
-                        whole_string = whole_string.replace('**', '^')
+                        whole_string = whole_string.replace('**', '&')
                         whole_string = string_pop(whole_string, right_bracket_position * 2)
                         whole_string = string_pop(whole_string, left_bracket_position * 2)
     # Output part.
